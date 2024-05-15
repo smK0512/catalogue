@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: catalogue
+  name: catalogue-example
   namespace: roboshop
 spec:
   selector:
