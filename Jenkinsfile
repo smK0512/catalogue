@@ -4,8 +4,8 @@ pipeline {
         string(name: 'VERSION', description: 'Enter the APP VERSION')
     }
 environment{
-        AWS_ACCOUNT_ID="533267172375"
-        REGION="ap-south-1"
+        AWS_ACCOUNT_ID="339712901884"
+        REGION="us-west-1"
         REPO_URI="${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/catalogue"
         DOCKER_REGISTRY = 'docker.io'
         DOCKER_REGISTRY_CREDENTIALS = 'docker-creds'
@@ -52,8 +52,8 @@ environment{
                     
                         sh """
                         docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
-                        docker tag catalogue:${VERSION}  muralisocial123/catalogue:${VERSION}
-                        docker push muralisocial123/catalogue:${VERSION}
+                        docker tag catalogue:${VERSION} smK0512/catalogue:${VERSION}
+                        docker push smK0512/catalogue:${VERSION}
                         """
                     
                 }
